@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Inicio Parqueadero";
+}
+
+<input type="hidden" id="message" value="@ViewBag.mensaje">
+
+@{
+    if (ViewBag.mensaje == "Debe ingresar una placa")
+    {
+        <script>
+            var mensa = document.getElementById('message').value;
+
+            Swal.fire({
+                icon: "error",
+                title: mensa,
+                showConfirmButton: true,
+                confirmButtonText: "Cerrar"
+            });
+        </script>
+    }
+    if (ViewBag.mensaje == "La placa no se encuentra en la base de datos")
+    {
+        <script>
+            var mensa = document.getElementById('message').value;
+
+            Swal.fire({
+                icon: "error",
+                title: mensa,
+                showConfirmButton: true,
+                confirmButtonText: "Cerrar"
+            });
+        </script>
+    }
+    if (ViewBag.mensaje == "El vehiculo a salido del sistema exitosamente")
+    {
+        <script>
+            var mensa = document.getElementById('message').value;
+
+            Swal.fire({
+                icon: "Succes",
+                title: mensa,
+                showConfirmButton: true,
+                confirmButtonText: "Cerrar"
+            });
+        </script>
+    }
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj Digital</title>
+    <link rel="stylesheet" href="~/Content/Reloj.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="reloj">
+        <p class="tiempo"></p>
+        <p class="fecha"></p>
+
+    </div>
+    <script src="~/Scripts/Reloj.js"></script>
+
+    @using (Html.BeginForm("Consulta", "VehiculosR", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form">
+            <input type="text" name="placa" />
+            <label class="lbl-nombre">
+                <span class="text-nomb">
+                    Placa
+                </span>
+            </label>
+        </div>
+
+        <div class="container">
+            <input class="btn fa|-id-card" value="Ver Datos" type="submit" />
+        </div>
+    }
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Parqueadero.Models.VehiculosR>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout4.cshtml";
+}
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create",null, new { @class = "crear" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoVehiculo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Placa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuarios.Nombres)
+        </th>
+        <th>
+            <p>Personalizar</p>
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoVehiculo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Placa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuarios.Nombres)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit",null, new { id=item.Id_Vehiculo,@class="eds" }) |
+            @Html.ActionLink("Details", "Details",null, new { id=item.Id_Vehiculo, @class = "eds" }) |
+            @Html.ActionLink("Delete", "Delete",null, new { id=item.Id_Vehiculo, @class = "eds" })
+        </td>
+    </tr>
+}
+
+</table>

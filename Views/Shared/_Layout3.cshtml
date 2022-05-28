@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="~/Estilos/StyleSheet3.css"
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="menu">
+            <ul class="nav">
+                <li class="link">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "estoo" })</li>
+                <li class="link">@Html.ActionLink("Ingreso", "Index", "Usuarios", null, new { @class = "estoo" })</li>
+                <li class="link">@Html.ActionLink("Vehiculo", "Index", "VehiculosR", null, new { @class = "estoo" })</li>
+            </ul>
+        </div>
+    </div>
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

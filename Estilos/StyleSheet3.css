@@ -1,0 +1,82 @@
+﻿*{
+    padding:0;
+    margin:0;
+    text-align:center;
+    
+}
+
+/*menu*/
+
+.link {
+    display: inline;
+    background-color: #333333;
+    margin-left: 50px;
+    padding: 35px;
+    transition: 1.5s;
+}
+
+.menu {
+    background-color: #333333;
+    height: 50px;
+}
+
+.estoo {
+    text-decoration: none;
+    position: relative;
+    top: 20px;
+    padding: 10px;
+    color: white;
+    transition: 1.5s;
+}
+
+.link:hover {
+    background-color: white;
+    transition: 1.5s;
+}
+
+.estoo:hover {
+    transition: 1.5s;
+    color: black;
+}
+
+body{
+    background-image:url(../Imagenes/taxi-g4870b37e5_1920.jpg);
+    background-size:cover;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+}
+table{
+    margin-left:15%;
+    margin-top:5%;
+}
+
+.crear{
+    text-decoration:none;
+    color:black;
+    font-size:20px;
+    transition:1.5s;
+    position:relative;
+    top:15px;
+}
+
+.crear:hover {
+    font-size: 25px;
+    transition: 1.5s
+}
+
+th{
+    background-color:#e8731f;
+    padding:10px;
+}
+
+tr {
+    background-color: #333333;
+    color:white;
+    
+}
+
+.item{
+    text-decoration:none;
+    color:white;
+    padding:10px;
+}

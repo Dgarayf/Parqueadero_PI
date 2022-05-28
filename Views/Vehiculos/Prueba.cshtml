@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Datos Usuario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var nombreC = ViewBag.nombre + " " + ViewBag.apellido;
+}
+
+<h2>@nombreC</h2>
+
+<h3>Datos Vehiculo</h3>
+<h4>Fecha:</h4>
+<p>@ViewBag.fecha</p>
+<h4>Color:</h4>
+<p>@ViewBag.color</p>
+<h4>Marca:</h4>
+<p>@ViewBag.marca</p>
+<h4>Tipo de vehiculo:</h4>
+<p>@ViewBag.tipo</p>
+<h4>Placa:</h4>
+<p>@ViewBag.placa</p>
+
+<br />
+
+<h3>Datos Usuario</h3>
+<h4>Número de documento:</h4>
+<p>@ViewBag.nDocumento</p>
+<h4>Tipo de Usuario:</h4>
+<p>@ViewBag.tUsuario</p>
+
+<p>@ViewBag.mensaje</p>
+
+@using (Html.BeginForm("Sacar", "Vehiculos", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <input type="hidden" value="@ViewBag.placa" name="confirmar"/>
+
+    <div class="container">
+        <input class="btn fa|-id-card" value="Sacar Vehiculo" type="submit" />
+    </div>
+}
+

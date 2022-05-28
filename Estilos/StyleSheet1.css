@@ -1,0 +1,105 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+
+body {
+    background-image: url(../Imagenes/auto-g8eae8c2ff_1920.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.info {
+    position: relative;
+    top: 50px;
+}
+
+.infos {
+    margin-top: 55px;
+}
+
+.esto {
+    margin-top: 55px;
+}
+
+.infop {
+    position: relative;
+    top: -15px;
+}
+
+.boton {
+    background-color: black;
+    color: white;
+    width: 110px;
+    border-radius: 5px;
+    height: 25px;
+    margin-top: 20px;
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+h2, h4 {
+    padding-top: 10px;
+    position: relative;
+    top: 15px;
+}
+
+.volver {
+    text-decoration: none;
+    color: #d9732a;
+    position: relative;
+    top: 20px;
+}
+
+.todo {
+    background-color: white;
+    width: 50%;
+    margin-left: 25%;
+    height: 750px;
+    border-radius: 10px;
+    opacity: 0.90;
+}
+
+.boton:hover {
+    background-color: white;
+    color: black;
+    transition: 1.5s;
+    width: 150px;
+}
+
+/*menu*/
+
+.link {
+    display: inline;
+    background-color: #333333;
+    margin-left: 50px;
+    padding: 35px;
+    transition: 1.5s;
+}
+
+.menu {
+    background-color: #333333;
+    height: 50px;
+}
+
+.estoo {
+    text-decoration: none;
+    position: relative;
+    top: 20px;
+    padding: 10px;
+    color: white;
+    transition: 1.5s;
+}
+
+.link:hover {
+    background-color: white;
+    transition: 1.5s;
+}
+
+.estoo:hover {
+    transition: 1.5s;
+    color: black;
+}

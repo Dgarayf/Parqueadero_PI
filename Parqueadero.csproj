@@ -129,32 +129,31 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccesoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\loginController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Controllers\VehiculosRController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Estudiante.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Estudiantes.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Model.Context.cs">
+    <Compile Include="Models\Login.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.Context.tt</DependentUpon>
+      <DependentUpon>Login.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model.cs">
+    <Compile Include="Models\login.cs">
+      <DependentUpon>Login.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Login.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.tt</DependentUpon>
+      <DependentUpon>Login.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Model.Designer.cs">
+    <Compile Include="Models\Login1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model.edmx</DependentUpon>
+      <DependentUpon>Login.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Proyecto.Context.cs">
       <AutoGen>True</AutoGen>
@@ -176,12 +175,6 @@
     </Compile>
     <Compile Include="Models\Usuarios.cs">
       <DependentUpon>Proyecto.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Vehiculo.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Vehiculos.cs">
-      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\VehiculosR.cs">
       <DependentUpon>Proyecto.tt</DependentUpon>
@@ -205,15 +198,15 @@
     <Content Include="Imagenes\auto-g8eae8c2ff_1920.jpg" />
     <Content Include="Imagenes\taxi-g4870b37e5_1920.jpg" />
     <Content Include="Imagenes\tunnel-ge679930e6_1920.jpg" />
-    <Content Include="Models\Model.Context.tt">
+    <Content Include="Models\Login.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
+      <DependentUpon>Login.edmx</DependentUpon>
+      <LastGenOutput>Login.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Model.tt">
+    <Content Include="Models\Login.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.cs</LastGenOutput>
+      <DependentUpon>Login.edmx</DependentUpon>
+      <LastGenOutput>Login1.cs</LastGenOutput>
     </Content>
     <Content Include="Models\Proyecto.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -227,19 +220,19 @@
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\Model.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\Model.edmx.diagram">
-      <DependentUpon>Model.edmx</DependentUpon>
-    </Content>
     <EntityDeploy Include="Models\Proyecto.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Proyecto.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <Content Include="Models\Proyecto.edmx.diagram">
       <DependentUpon>Proyecto.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\Login.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Login.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Login.edmx.diagram">
+      <DependentUpon>Login.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\Reloj.js" />
@@ -281,6 +274,13 @@
     <Content Include="Views\Shared\_Layout2.cshtml" />
     <Content Include="Views\Shared\_Layout3.cshtml" />
     <Content Include="Views\Shared\_Layout4.cshtml" />
+    <Content Include="Views\login\Create.cshtml" />
+    <Content Include="Views\login\Delete.cshtml" />
+    <Content Include="Views\login\Details.cshtml" />
+    <Content Include="Views\login\Edit.cshtml" />
+    <Content Include="Views\login\Index.cshtml" />
+    <Content Include="Views\Acceso\Registro.cshtml" />
+    <Content Include="Views\Shared\_Layout5.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

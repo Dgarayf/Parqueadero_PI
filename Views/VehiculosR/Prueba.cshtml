@@ -1,8 +1,62 @@
 ﻿
 @{
-    ViewBag.Title = "Prueba";
+    ViewBag.Title = "Datos Usuario";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var nombreC = ViewBag.nombre + " " + ViewBag.apellido;
 }
+<div class="todo">
+    <h2>@nombreC</h2>
+    <h2></h2>
+    <h2></h2>
+    <h3>Datos Vehiculo</h3>
+    <h2></h2>
+    <h4>Fecha:</h4>
+    <h2></h2>
+    <h2></h2>
+    <p>@ViewBag.fecha</p>
+    <h4>Color:</h4>
+    <h2></h2>
+    <h2></h2>
+    <p>@ViewBag.color</p>
+    <h2></h2>
+    <h2></h2>
+    <h4>Marca:</h4>
+    <h2></h2>
+    <h2></h2>
+    <p>@ViewBag.marca</p>
 
-<h2>Prueba</h2>
+    <h4>Tipo de vehiculo:</h4>
+    <h2></h2>
+    <h2></h2>
+    <p>@ViewBag.tipo</p>
+    
+    <h4>Placa:</h4>
+    <h2></h2>
+    <h2></h2>
+    <p>@ViewBag.placa</p>
 
+    <br />
+
+    <h3>Datos Usuario</h3>
+    <h4>Número de documento:</h4>
+    <h2></h2>
+    <h2></h2>
+    <p>@ViewBag.nDocumento</p>
+    <h4>Tipo de Usuario:</h4>
+    <h2></h2>
+    <h2></h2>
+    <p>@ViewBag.tUsuario</p>
+
+    <p>@ViewBag.mensaje</p>
+
+    @using (Html.BeginForm("Sacar", "VehiculosR", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <input type="hidden" value="@ViewBag.placa" name="confirmar" />
+
+        <div class="container">
+            <input class="boton" value="Sacar Vehiculo" type="submit" />
+        </div>
+    }
+</div>

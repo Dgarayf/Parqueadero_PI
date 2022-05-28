@@ -13,10 +13,10 @@ namespace Parqueadero.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ParqueaderoEntities4 : DbContext
+    public partial class ParqueaderoEntities6 : DbContext
     {
-        public ParqueaderoEntities4()
-            : base("name=ParqueaderoEntities4")
+        public ParqueaderoEntities6()
+            : base("name=ParqueaderoEntities6")
         {
         }
     
@@ -25,9 +25,6 @@ namespace Parqueadero.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Estudiante> Estudiante { get; set; }
-        public virtual DbSet<Estudiantes> Estudiantes { get; set; }
-        public virtual DbSet<Vehiculo> Vehiculo { get; set; }
-        public virtual DbSet<Vehiculos> Vehiculos { get; set; }
+        public virtual DbSet<login> login { get; set; }
     }
 }

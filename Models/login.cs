@@ -12,12 +12,12 @@ namespace Parqueadero.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Vehiculo
+    public partial class login
     {
-        public int id { get; set; }
-        public string Tipo_de_vehiculo { get; set; }
-        public string Color { get; set; }
-        public string Marca { get; set; }
-        public string placa { get; set; }
+        public int Id_Persona { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string Correo { get; set; }
+        public string Contraseña { get; set; }
     }
 }
